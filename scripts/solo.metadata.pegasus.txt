@@ -1,0 +1,26 @@
+collection: DDR Solo
+shortname: Solo
+
+game: Solo Bass Mix
+file: [insert path here]
+sortBy: s1
+launch: {file.path}
+assets.box_front: assets/solo-bass-mix.png
+
+game: Solo 2000
+file: [insert path here]
+sortBy: s2
+launch: {file.path}
+assets.box_front: assets/solo-2000.png
+
+game: 4thMix Plus Solo
+file: [insert path here]
+sortBy: s3
+launch: {file.path}
+assets.box_front: assets/4th-plus-solo.png
+
+game: 5thMix Solo
+file: [insert path here]
+sortBy: s4
+launch: {file.path}
+assets.box_front: assets/5thmix-solo.png

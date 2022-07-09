@@ -1,0 +1,33 @@
+collection: Dancing Stage
+shortname: DS
+
+game: Euromix
+file: [insert path here]
+sortBy: ds1
+launch: {file.path}
+assets.box_front: assets/euromix.png
+
+game: Euromix 2
+file: [insert path here]
+sortBy: ds2
+launch: {file.path}
+assets.box_front: assets/euromix2.png
+
+game: True Kiss Destination
+file: [insert path here]
+sortBy: ds3
+launch: {file.path}
+assets.box_front: assets/dstkd.png
+
+game: Dreams Come True
+file: [insert path here]
+sortBy: ds4
+launch: {file.path}
+assets.box_front: assets/dsdct.png
+
+game: Disney's Rave
+file: [insert path here]
+sortBy: ds5
+launch: {file.path}
+assets.box_front: assets/disney.png
+

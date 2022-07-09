@@ -1,0 +1,41 @@
+collection: In The Groove
+shortname: ITG
+
+
+game: NotITG
+file: rtyurtu
+sortBy: a
+launch: [insert path here]
+assets.box_front: assets/notitg.png
+
+game: In The Groove 2
+file: nwywgrnsgfj
+sortBy: b
+launch: [insert path here]
+assets.box_front: assets/itg2.png
+
+game: In The Groove 3 Encore
+file: cghxghixgfu
+sortBy: c
+launch: [insert path here]
+assets.box_front: assets/itg3.png
+
+game: Mungyodance
+file: [insert path here]
+sortBy: d
+launch: {file.path}
+assets.box_front: assets/mungyodance.png
+
+game: Mungyodance 2
+file: [insert path here]
+sortBy: e
+launch: {file.path}
+assets.box_front: assets/mungyodance2.png
+
+game: Mungyodance 3
+file: [insert path here]
+sortBy: f
+launch: {file.path}
+assets.box_front: assets/mungyodance3.png
+
+
