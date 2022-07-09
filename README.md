@@ -107,11 +107,21 @@ all you have to do is replace `ddrexproc` in the launcher script with the name o
 for instance, if you replaced it with `ddr2m`, it would launch Dance Dance Revolution 2ndMIX.
 feel free to repeat this for every game listed in the `sta` folder that you want to have in your pegasus setup.
 
-if you want to have increased visual clarity when booting a game, you can create a shortcut of `kill_pegasus.bat`, `mame2lit.exe`, and `mame.exe`, edit the properties of each shortcut so that they start 'minimized', and then point the autohotkey launcher script to their respective .lnk shortcut files.<br>they will start minimized, and it looks really clean. i prefer it, but whether or not you choose to do it yourself is up to you.
+**pro tip:** if you want to have increased visual clarity when booting a game, you can create a shortcut of `kill_pegasus.bat`, `mame2lit.exe`, and `mame.exe`, edit the properties of each shortcut so that they start 'minimized', and then point the autohotkey launcher script to their respective .lnk shortcut files.<br>they will start minimized, and it looks really clean. i prefer it, but whether or not you choose to do it yourself is up to you.
 
 ---
 
 #### downloading assets for pegasus
 - okay, so we have some game launchers written in autohotkey, and compiled to .exe.
 - now, we can download the logos for each game you want to have in your launcher.
-- you can download individual logos
+- you can download [individual logos](https://github.com/evanclue/ddr-picker/tree/main/assets), or you can just download [the whole pack](https://github.com/evanclue/ddr-picker/raw/main/assets.zip).
+- there isn't really any reason why you shouldn't download the whole pack, considering it's only like 9MB of images. but the choice is yours.
+- create a new folder inside of the 'config' folder of your pegasus setup, called `metafiles`.
+- the full path should be `C:\pegasus\config\metafiles`. drag the assets folder in there, to make it `C:\pegasus\config\metafiles\assets`.
+- you should now have a whole bunch of .png files of various ddr logos inside of `C:\pegasus\config\metafiles\assets`.
+
+---
+
+#### setting up the metadata files
+- this is the tedious part.
+- download this ddr metadata file, and place it in 
