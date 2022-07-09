@@ -123,5 +123,18 @@ feel free to repeat this for every game listed in the `sta` folder that you want
 ---
 
 #### setting up the metadata files
-- this is the tedious part.
-- download this ddr metadata file, and place it in 
+- download this [ddr metadata template file](https://github.com/evanclue/ddr-picker/raw/main/scripts/ddr.metadata.pegasus.txt) by right-clicking and doing 'save page as', and place it in your `metafiles` folder, next to `assets`.
+- the full path should be `C:\pegasus\config\metafiles\ddr.metadata.pegasus.txt`
+- you should be able to boot up pegasus-fe finally, and scroll around! hooray! look how pretty it is!
+- the only game you should be able to launch successfully is extreme pro clarity, since we set it up earlier.
+- you will need to manually go through your ddr metadata file, remove the games you don't want, and add paths to the launchers of all the games you DO want.
+- this is the tedious part, since you'll have to make an autohotkey launcher script for each game, and add the path of each launcher to the metadata file per-game. in the template, replace the `[insert path here]` with the path to your launcher for each game.
+- i have also made metafile templates for [Dancing Stage](https://github.com/evanclue/ddr-picker/raw/main/scripts/dancingstage.metadata.pegasus.txt), [In The Groove](https://github.com/evanclue/ddr-picker/raw/main/scripts/itg.metadata.pegasus.txt), and [DDR Solo](https://github.com/evanclue/ddr-picker/raw/main/scripts/solo.metadata.pegasus.txt).
+- drop these other template files into your metafiles directory, and you can scroll between each page with numpad 4 and numpad 6. they should have nice little collection logos on the top of the screen to match.
+
+- once you've gone through and made scripts for every game, added them to the corresponding metadata file, and tested each and every game to make sure they launch fine through pegasus, you can start setting up your controls in MAME.
+
+#### setting up controls in MAME.
+
+
+---
