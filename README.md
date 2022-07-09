@@ -60,9 +60,13 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 - create a new folder called 'config' in the pegasus directory.
 - drop the settings.txt in there. full path should be `C:/pegasus/config/settings.txt`
 - if you open pegasus now, it should give you an error saying there are no games installed. so let's get some games!
+
 ---
 
 #### now, we can set up MAME for DDR.
-- i've assembled a ready-to-go pack to get MAME going on your DDR cabinet.
-  - this includes
-- you can download it here, or here.
+- i've assembled a ready-to-go pack to get MAME going on your DDR cabinet. you can download it [here](https://drive.google.com/file/d/1MeW7KpsYcS2fmws7ZQG0OomuIFVHAcid/view?usp=sharing), or here. (12GB)
+  - this includes:
+  - a custom build of [bemani-mame](https://github.com/987123879113/mame/wiki).
+  - pre-built NVRAM for (almost) every game, negating the need to install each game manually.
+  - save states that drop you right into the title screen of the game with event mode already enabled, skipping the lengthy boot process.
+  - all the game data you need to get it going.
