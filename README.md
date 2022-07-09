@@ -64,9 +64,27 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 ---
 
 #### now, we can set up MAME for DDR.
-- i've assembled a ready-to-go pack to get MAME going on your DDR cabinet. you can download it [here](https://drive.google.com/file/d/1MeW7KpsYcS2fmws7ZQG0OomuIFVHAcid/view?usp=sharing), or here. (12GB)
-  - this includes:
+i've assembled a ready-to-go pack to get MAME going on your DDR cabinet.<br>you can download it [here](https://drive.google.com/file/d/1MeW7KpsYcS2fmws7ZQG0OomuIFVHAcid/view?usp=sharing), or here (secondary link coming soon). (12GB)<br><br>
+it includes:
   - a custom build of [bemani-mame](https://github.com/987123879113/mame/wiki).
   - pre-built NVRAM for (almost) every game, negating the need to install each game manually.
   - save states that drop you right into the title screen of the game with event mode already enabled, skipping the lengthy boot process.
   - all the game data you need to get it going.
+
+once you have the MAME pack downloaded, you should extract it to `C:\pegasus\games\ddr573-mame` for example.<br>
+now that we have MAME, we can start writing scripts to get games to launch.
+
+---
+
+#### writing scripts to get games to launch.
+
+you can do this a few different ways. you can do it using a mame.exe shortcut, you can do it as a batch script -- but i've had trouble getting pegasus to open .lnk and .bat files sometimes, and i couldn't really figure out why.<br>my solution was to use autohotkey, compile my scripts as .exe, and have pegasus open the .exe file.
+
+so let's do that.
+- install [autohotkey](https://www.autohotkey.com/).
+- right click in the ddr573-mame folder and create a new autohotkey script.
+- name it based on the game you want to open. let's start with DDR Extreme Pro Clarity, for example. so call it `launch_ddrexproc.ahk`
+- keep all four of the original lines at the top, and add `run mame.exe ddrexproc -state o` to the bottom.
+- if you have a LIT board and you want to use cab lights, add a line that says `run mame2lit.exe`.
+- save the document, and run it. it should drop you into the ddr extreme title screen, with light support.
+- you can now right click on the .ahk file you made, and click "compile script" to create an .exe of the script that pegasus can run later.
