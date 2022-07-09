@@ -90,18 +90,23 @@ so let's do it.
 let's take a look at what these scripts actually do.
 
 `run kill_pegasus.bat`<br>
-this will end the pegasus process as soon as the game is opened. it must be a separate batch script, since autohotkey is not authorized to do system tasks like ending a process.<br>
+  this will end the pegasus process as soon as the game is opened. it must be a separate batch script, since autohotkey is not authorized to do system tasks like ending a process.<br>
 `run mame2lit.exe`<br>
-this runs the mame support program that handles cab lights for a LIT board.<br>
+  this runs the mame support program that handles cab lights for a LIT board.<br>
 `run mame.exe ddrexproc -state o`<br>
-this tells mame to load DDR Extreme Pro Clarity using a specific save state named 'o'.<br>
+  this tells mame to load DDR Extreme Pro Clarity using a specific save state named 'o'.<br>
 i made a save state right before the title screen of the game in event mode, and named them all 'o'. why 'o'? i don't know. whatever, shut up!
 
 - go ahead and run the launcher script. it should drop you into the ddr extreme title screen, with light support. hooray!
 - to exit mame, just press esc.
 - you can now right click on the .ahk file you made, and click "compile script" to create an .exe of the script that pegasus can run later.
-<br>
 
+you can easily copy the launcher script, and edit it to point at different games.
+to see what save states exist in the pack, you can view `C:\pegasus\games\ddr573-mame\sta`.
+all you have to do is replace `ddrexproc` in the launcher script with whatever game is in the `sta` folder that you want to run.
+for instance, if you replaced it with `ddr2m`, it would launch Dance Dance Revolution 2ndMIX.
+
+feel free to repeat this for every game listed in the `sta` folder.
 
 ---
 
