@@ -49,15 +49,20 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 
 ---
 
-#### at this point, we can finally get started on setting up pegasus, and getting games running.
+#### at this point, we can finally get started on setting up pegasus.
 - download the latest version of [pegasus-fe](https://pegasus-frontend.org/#downloads).
 - place pegasus-fe.exe somewhere like `C:/pegasus/pegasus-fe`. don't run it yet.
 - create a blank text document titled `portable.txt` and place it in your `C:/pegasus/pegasus-fe` directory next to pegasus-fe.exe
 - download the [modified micro theme zip](https://github.com/evanclue/ddr-picker/raw/main/micro.zip).
 - create a new directory in your pegasus folder just called `themes`, and extract the micro zip in there.
 - the full path for the micro theme should be `C:/pegasus/themes/micro/`.
-- download [settings.txt](https://github.com/evanclue/ddr-picker/raw/main/settings.txt).
+- download [settings.txt](https://github.com/evanclue/ddr-picker/raw/main/settings.txt). once you click the link, right click and do "save page as" to download it.
 - create a new folder called 'config' in the pegasus directory.
 - drop the settings.txt in there. full path should be `C:/pegasus/config/settings.txt`
-- 
+- if you open pegasus now, it should give you an error saying there are no games installed. so let's get some games!
 ---
+
+#### now, we can set up MAME for DDR.
+- i've assembled a ready-to-go pack to get MAME going on your DDR cabinet.
+  - this includes
+- you can download it here, or here.
