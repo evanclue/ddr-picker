@@ -1,4 +1,4 @@
-general.theme: D:/pegasus/themes/micro/
+general.theme: C:/pegasus/themes/micro/
 general.verify-files: false
 general.input-mouse-support: false
 general.fullscreen: true
