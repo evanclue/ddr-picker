@@ -71,7 +71,7 @@ it includes:
   - save states that drop you right into the title screen of the game with event mode already enabled, skipping the lengthy boot process.
   - all the game data you need to get it going.
 
-once you have the MAME pack downloaded, you should extract it to `C:\pegasus\games\ddr573-mame` for example.<br>
+once you have the MAME pack downloaded, you should extract it to `C:/pegasus/games/ddr573-mame` for example.<br>
 now that we have MAME, we can start writing scripts to get games to launch.
 
 ---
@@ -88,3 +88,8 @@ so let's do that.
 - if you have a LIT board and you want to use cab lights, add a line that says `run mame2lit.exe`.
 - save the document, and run it. it should drop you into the ddr extreme title screen, with light support.
 - you can now right click on the .ahk file you made, and click "compile script" to create an .exe of the script that pegasus can run later.
+
+---
+
+#### downloading assets for pegasus
+- tiles, etc.
