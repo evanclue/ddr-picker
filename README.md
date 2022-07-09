@@ -10,7 +10,7 @@ ddr-picker was specifically optimized for the niche of DDR cabinets that feature
 the DDR cabinet's control panel is handled using a [J-PAC](https://www.ultimarc.com/control-interfaces/j-pac-en/j-pac-c-control-only-version/), which makes the buttons on the cab function like a keyboard. the lighting is handled using a [LIT board](https://dinsfire.com/projects/lit-board/).
 
 this was a personal project that i originally never intended to share, but i've put enough work into it at this point that i want to save other people the time of building something like this from the ground up.
-i know next to nothing about code, so it is bodged together in the only way i know how: [autohotkey](https://www.autohotkey.com/).
+i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picker is bodged together in the only way i know how: [autohotkey](https://www.autohotkey.com/).
 
 ## features:
 
