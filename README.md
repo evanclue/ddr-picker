@@ -103,12 +103,15 @@ i made a save state right before the title screen of the game in event mode, and
 
 you can easily copy the launcher script, and edit it to point at different games.
 to see what save states exist in the pack, you can view `C:\pegasus\games\ddr573-mame\sta`.
-all you have to do is replace `ddrexproc` in the launcher script with whatever game is in the `sta` folder that you want to run.
+all you have to do is replace `ddrexproc` in the launcher script with the name of the games in the `sta` folder that you want to run.
 for instance, if you replaced it with `ddr2m`, it would launch Dance Dance Revolution 2ndMIX.
+feel free to repeat this for every game listed in the `sta` folder that you want to have in your pegasus setup.
 
-feel free to repeat this for every game listed in the `sta` folder.
+if you want to have increased visual clarity when booting a game, you can create a shortcut of `kill_pegasus.bat`, `mame2lit.exe`, and `mame.exe`, edit the properties of each shortcut so that they start 'minimized', and then point the autohotkey launcher script to their respective .lnk shortcut files.<br>they will start minimized, and it looks really clean. i prefer it, but whether or not you choose to do it yourself is up to you.
 
 ---
 
 #### downloading assets for pegasus
-- tiles, etc.
+- okay, so we have some game launchers written in autohotkey, and compiled to .exe.
+- now, we can download the logos for each game you want to have in your launcher.
+- you can download individual logos
