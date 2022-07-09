@@ -1,0 +1,102 @@
+collection: Dance Dance Revolution
+shortname: DDR
+
+game: A3
+file: [insert a3 simulator path here]
+sortBy: a
+launch: {file.path}
+assets.box_front: assets/a3-custom.png
+
+game: DDR Omnimix
+file: [insert your omnimix path here]
+sortBy: b
+launch: {file.path}
+assets.box_front: assets/omni-custom.png
+
+game: STARLiGHT
+file: [insert your ddr starlight path here]
+sortBy: c
+launch: {file.path}
+assets.box_front: assets/starlight.png
+
+
+
+
+
+game: DDR Internet Ranking
+file: [insert path here]
+sortBy: d
+launch: {file.path}
+assets.box_front: assets/ddrj.png
+
+game: 2ndMix
+file: [insert path here]
+sortBy: e
+launch: {file.path}
+assets.box_front: assets/2ndmix.png
+
+game: 3rdMix
+file: [insert path here]
+sortBy: f
+launch: {file.path}
+assets.box_front: assets/3rdmix.png
+
+game: 4thMix
+file: [insert path here]
+sortBy: g
+launch: {file.path}
+assets.box_front: assets/4thmix.png
+
+game: 5thMix
+file: [insert path here]
+sortBy: h
+launch: {file.path}
+assets.box_front: assets/5thmix.png
+
+game: DDRMAX
+file: [insert path here]
+sortBy: i
+launch: {file.path}
+assets.box_front: assets/ddrmax.png
+
+game: DDRMAX2
+file: [insert path here]
+sortBy: j
+launch: {file.path}
+assets.box_front: assets/ddrmax2.png
+
+game: Extreme
+file: C:\pegasus\games\ddr573-mame\launch_ddrexproc.exe
+sortBy: k
+launch: {file.path}
+assets.box_front: assets/extreme.png
+
+game: SuperNova
+file: fillertext
+sortBy: l
+launch: [insert path here]
+assets.box_front: assets/supernova.png
+
+game: SuperNova 2
+file: fillertext2
+sortBy: m
+launch: [insert path here]
+assets.box_front: assets/supernova2.png
+
+game: DDR X2
+file: [insert path here]
+sortBy: n
+launch: {file.path}
+assets.box_front: assets/x2.png
+
+game: DDR X3 Vs. 2ndMix
+file: [insert path here]
+sortBy: o
+launch: {file.path}
+assets.box_front: assets/x3vs2nd.png
+
+game: DDR 2014
+file: [insert path here]
+sortBy: q
+launch: {file.path}
+assets.box_front: assets/2014.png
