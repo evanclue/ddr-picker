@@ -53,5 +53,11 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 - download the latest version of [pegasus-fe](https://pegasus-frontend.org/#downloads).
 - place pegasus-fe.exe somewhere like `C:/pegasus/pegasus-fe`. don't run it yet.
 - create a blank text document titled `portable.txt` and place it in your `C:/pegasus/pegasus-fe` next to pegasus-fe.exe
+- download the [modified micro theme zip](https://github.com/evanclue/ddr-picker/raw/main/micro.zip).
+- create a new directory in your pegasus folder just called `themes`, and extract the micro zip in there.
+- the full path for the micro theme should be `C:/pegasus/themes/micro/`.
+- download [settings.txt](https://github.com/evanclue/ddr-picker/raw/main/settings.txt).
+- create a new folder called 'config' in the pegasus directory.
+- drop the settings.txt in there. full path should be `C:/pegasus/config/settings.txt`
 - 
 ---
