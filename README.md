@@ -64,7 +64,7 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 ---
 
 #### now, we can set up MAME for DDR.
-i've assembled a ready-to-go pack to get MAME going on your DDR cabinet.<br>you can download it [here](https://drive.google.com/file/d/1MeW7KpsYcS2fmws7ZQG0OomuIFVHAcid/view?usp=sharing), or here (secondary link coming soon). (12GB)<br><br>
+i've assembled a ready-to-go pack to get MAME going on your DDR cabinet.<br>you can download it [here](https://drive.google.com/file/d/1MeW7KpsYcS2fmws7ZQG0OomuIFVHAcid/view?usp=sharing), or [here](https://mega.nz/file/ICVRFJwI#ksriX9qHzXEdDwwjsqYv84MN1V43CSedjK8lEosV_7Y). (12GB)<br><br>
 it includes:
   - a custom build of [bemani-mame](https://github.com/987123879113/mame/wiki).
   - pre-built NVRAM for (almost) every game, negating the need to install each game manually.
@@ -80,14 +80,28 @@ now that we have MAME, we can start writing scripts to get games to launch.
 
 you can do this a few different ways. you can do it using a mame.exe shortcut, you can do it as a batch script -- but i've had trouble getting pegasus to open .lnk and .bat files sometimes, and i couldn't really figure out why.<br>my solution was to use autohotkey, compile my scripts as .exe, and have pegasus open the .exe file.
 
-so let's do that.
+by doing it this way, however, it seems to break pegasus's process watchdog feature, which causes the frontend to restart alongside the game, wasting resources. luckily, this is an easy fix, and just requires us to run a .bat file to kill pegasus before starting the game.
+
+so let's do it.
 - install [autohotkey](https://www.autohotkey.com/).
-- right click in the ddr573-mame folder and create a new autohotkey script.
-- name it based on the game you want to open. let's start with DDR Extreme Pro Clarity, for example. so call it `launch_ddrexproc.ahk`
-- keep all four of the original lines at the top, and add `run mame.exe ddrexproc -state o` to the bottom.
-- if you have a LIT board and you want to use cab lights, add a line that says `run mame2lit.exe`.
-- save the document, and run it. it should drop you into the ddr extreme title screen, with light support.
+- download the [kill_pegasus script](https://github.com/evanclue/ddr-picker/raw/main/scripts/kill_pegasus.bat), and [this launcher script for DDR Extreme Pro Clarity](https://github.com/evanclue/ddr-picker/raw/main/scripts/launch_ddrexproc.ahk) by right-clicking the page, and doing 'save page as'.
+- put both of the scripts next to the mame executable in the `ddr573-mame` folder.
+
+let's take a look at what these scripts actually do.
+
+`run kill_pegasus.bat`<br>
+this will end the pegasus process as soon as the game is opened. it must be a separate batch script, since autohotkey is not authorized to do system tasks like ending a process.<br>
+`run mame2lit.exe`<br>
+this runs the mame support program that handles cab lights for a LIT board.<br>
+`run mame.exe ddrexproc -state o`<br>
+this tells mame to load DDR Extreme Pro Clarity using a specific save state named 'o'.<br>
+i made a save state right before the title screen of the game in event mode, and named them all 'o'. why 'o'? i don't know. whatever, shut up!
+
+- go ahead and run the launcher script. it should drop you into the ddr extreme title screen, with light support. hooray!
+- to exit mame, just press esc.
 - you can now right click on the .ahk file you made, and click "compile script" to create an .exe of the script that pegasus can run later.
+<br>
+
 
 ---
 
