@@ -102,10 +102,10 @@ i made a save state right before the title screen of the game in event mode, and
 - to exit mame, just press esc.
 - you can now right click on the .ahk file you made, and click "compile script" to create an .exe of the script that pegasus can run later.
 
-you can easily copy the launcher script, and edit it to point at different games.
-to see what save states exist in the pack, you can view `C:\pegasus\games\ddr573-mame\sta`.
-all you have to do is replace `ddrexproc` in the launcher script with the name of the games in the `sta` folder that you want to run.
-for instance, if you replaced it with `ddr2m`, it would launch Dance Dance Revolution 2ndMIX.
+you can easily copy the launcher script, and edit it to point at different games.<br>
+to see what save states exist in the pack, you can view `C:\pegasus\games\ddr573-mame\sta`.<br>
+all you have to do is replace `ddrexproc` in the launcher script with the name of the games in the `sta` folder that you want to run.<br>
+for instance, if you replaced it with `ddr2m`, it would launch Dance Dance Revolution 2ndMIX.<br>
 feel free to repeat this for every game listed in the `sta` folder that you want to have in your pegasus setup.
 
 you can see what mame name corresponds with each DDR game [here](https://github.com/987123879113/mame/wiki/Dance-Dance-Revolution-%7C-Dancing-Stage).
@@ -141,12 +141,12 @@ you can see what mame name corresponds with each DDR game [here](https://github.
 
 ### setting up controls in MAME.
 
-- open a game using pegasus, or by running the shortcut manually.
+- open a game using pegasus, or by running your launcher manually.
 - press TAB. this will open a settings menu.
 - scroll to *Input (this machine)* and press enter.
 - systematically clear every control in the list by pressing delete, then the down arrow. delete, down, delete, down, delete, etc., until the list is entirely cleared.
 - *Up*, *Down*, *Left*, and *Right* corresponds to the dance pad.
-- *Button 2* is the left selector button, and *Button 3* is the right selector button.
+- *Button 2* is the left selector button, and *Button 3* is the right selector button. setting *Button 1* won't do anything, don't bother.
 - *Player Start* is the start button.
 - apply these settings for both P1 and P2.
 - press tab to close the menu.
@@ -155,12 +155,14 @@ you can see what mame name corresponds with each DDR game [here](https://github.
 
 ---
 
+### automating windows to run the frontend at startup.
+
 it's all starting to look very promising. we have a frontend for DDR that looks great, all the games' controls are set up, the cab lights are working, and you can navigate the frontend using the cab buttons.
 
 now all we have to do is **automate windows to run the frontend at startup.**
 
-i've tried all sorts of methods of booting a program on startup, and they are all way, way too slow. 30-60 seconds after reaching the desktop is unacceptably slow.
-putting a shortcut in the "startup" folder, adding a value to the "run" command in registry... i even tried doing it in [windows task scheduler](https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page), which was hell. and, annoyingly, it was equally as slow as the other methods.
+i've tried all sorts of methods of booting a program on startup, and they are all way, way too slow.<br>
+putting a shortcut in the "startup" folder, adding a value to the "run" command in registry... i even tried doing it in [windows task scheduler](https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page), which was hell. and, annoyingly, it was equally as slow as the other methods. 30-60 seconds after reaching the desktop is unacceptable to me.
 
 the fastest and most effective method, albeit a bit aggressive, is to replace the windows shell with our own script.<br>
 this means that windows never initializes background services, which means you get more processing power for your games, and no annoying shit like windows defender. it also never initializes explorer.exe, which means no desktop icons, start menu, etc.<br>
