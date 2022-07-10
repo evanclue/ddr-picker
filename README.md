@@ -42,7 +42,7 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 ---
 
 ### now, set up your cab stuff.
-- install your [LIT board](https://dinsfire.com/projects/lit-board/) to make your cab lights work, and your [J-PAC](https://www.ultimarc.com/control-interfaces/j-pac-en/j-pac-c-control-only-version/) for your control panel. use [WinIPAC v2](http://ultimarc2.com/winipacv2.html) to remap your control panel buttons.
+- install your [LIT board](https://dinsfire.com/projects/lit-board/) to make your cab lights work, and your [J-PAC](https://www.ultimarc.com/control-interfaces/j-pac-en/j-pac-c-control-only-version/) for your control panel. use [WinIPAC v2](http://ultimarc2.com/winipacv2.html) to remap your control panel buttons to keyboard keys.
 - i have my control panel set up like this:
 ![cp-mapping](https://user-images.githubusercontent.com/72628412/178121065-bd7bb1a5-8258-42e7-bedc-ac0ffc1999cd.png)
 - i found that this was the best mapping for compatibility with games, and functionality within pegasus-fe's limitations.
