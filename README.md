@@ -176,7 +176,7 @@ and, of course, we want pegasus to start as soon as possible, so here it is.
 
 - compile the .ahk script to .exe.
 - open regedit, and navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon`. don't drop down the winlogon folder, just click on it.
-- you should now be able to see *Shell* on the right side. double-click on it, and replace it with `C:\pegasus\pegasus-startup.exe`
+- you should now be able to see *Shell* on the right side. double-click on it, and replace `explorer.exe` with `C:\pegasus\pegasus-startup.exe`
 - this will run our startup script immediately on boot, while disabling explorer, and other things we don't need.
 - reboot.
 - while in this "dedicated" pegasus mode, you can do ctrl+shift+esc to open task manager. do file>run, and you can open explorer.exe to do whatever file management tweaks you need to do. you can open regedit as well using the run prompt to revert the shell back to `explorer.exe` if you need to.
@@ -185,7 +185,23 @@ and, of course, we want pegasus to start as soon as possible, so here it is.
 
 #### adding a reset button.
 
-after opening a game, the only way for us to close the game and get back to the menu is to manually shut it down, and manually open pegasus.<br>
+after opening a game, the only way for us to close the game and get back to the menu is to do it ourselves, or reboot.<br>
 that sucks. let's make a reset button!
 
-- the way i made this happen is with a combination of
+the way i made this happen is with a combination of hardware and software tweaks.<br>
+i added a [physical reset button to my cab's coindoor](https://user-images.githubusercontent.com/72628412/178127104-343ae045-aaf1-47c7-aba1-c28c2190d382.jpg), as demonstrated in the video at the top of this readme.<br>
+i wired the button up to the coin signal wires, which a J-PAC is able to bind to a keyboard key.<br>
+so, i assigned the coin assembly to output the F12 key. which means i essentially have a physical F12 key on my coindoor now.<br>
+using an extremely simple autohotkey + batch solution, we can make this act as a "reset" button that closes whatever game is open, and returns to pegasus.<br>
+
+- download [reset-button.ahk](https://github.com/evanclue/ddr-picker/raw/main/scripts/reset-button.ahk) and [killall-reset.bat](https://github.com/evanclue/ddr-picker/raw/main/scripts/killall-reset.bat) and place both of them into your pegasus folder.
+
+let's take a look at what these scripts actually do.<br>
+`reset-button.ahk` sits in memory forever and waits for the F12 key to be pressed. when it is pressed, it runs killall-reset.bat.<br>
+`killall-reset.bat` resets the resolution to 2133x1600 in case a game changed the resolution, then checks if any game programs are open.<br>
+if they are, it ends the processes, and restarts pegasus.
+
+so now, all we have to do is make the reset button script start at boot.
+- compile reset-button.ahk into an .exe using the right-click menu.
+- open pegasus-startup.ahk with a text editor, and add `run reset-button.exe` to it.
+- save the document, and re-compile pegasus-startup.ahk into an .exe.
