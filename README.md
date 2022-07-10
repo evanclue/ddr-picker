@@ -212,4 +212,4 @@ so now, all we have to do is make the reset button script start at boot.
 
 ### you did it! hooray!
 now you have a ddr-picker setup for your cab! this took me literally all day to write, and i hope i didn't miss anything.
-if you need any further help, feel free to reach out to me on [discord](https://discord.gg.clue).
+if you need any further help, feel free to reach out to me on [discord](https://discord.gg/clue).
