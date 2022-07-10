@@ -144,11 +144,11 @@ you can see what mame name corresponds with each DDR game [here](https://github.
 - press TAB. this will open a settings menu.
 - scroll to *Input (this machine)* and press enter.
 - systematically clear every control in the list by pressing delete, then the down arrow. delete, down, delete, down, delete, etc., until the list is entirely cleared.
-- Up, Down, Left, and Right corresponds to the dance pad.
-- Button 2 is the left selector button, and Button 3 is the right selector button.
-- Player Start is the start button.
-- apply these settings for both players.
-- press tab to close the MAME menu.
+- *Up*, *Down*, *Left*, and *Right* corresponds to the dance pad.
+- *Button 2* is the left selector button, and *Button 3* is the right selector button.
+- *Player Start* is the start button.
+- apply these settings for both P1 and P2.
+- press tab to close the menu.
 - press esc. to gracefully exit mame to make sure your settings will be saved.
 - you will have to do this for each game individually, but you only have to do it once.
 
@@ -159,3 +159,8 @@ it's all starting to look very promising. we have a frontend for DDR that looks 
 now all we have to do is
 #### automate windows to run the frontend at startup.
 
+i've tried all sorts of methods of booting a program on startup, and they are all way, way too slow.
+putting a shortcut in the "startup" folder, adding a value to the "run" command in registry...<br>
+i even tried doing it in [windows task scheduler](https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page), which was hell. and, annoyingly, it was equally as slow as the other methods.
+
+the most fastest and most effective method, albeit a bit aggressive, is to replace the fucking windows shell with our own script.
