@@ -65,7 +65,7 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 ---
 
 ### now, we can set up MAME for DDR.
-i've assembled a ready-to-go pack to get MAME going on your DDR cabinet.<br>you can download it [here](https://drive.google.com/file/d/1MeW7KpsYcS2fmws7ZQG0OomuIFVHAcid/view?usp=sharing), or [here](https://mega.nz/file/ICVRFJwI#ksriX9qHzXEdDwwjsqYv84MN1V43CSedjK8lEosV_7Y). (12GB)<br><br>
+i've assembled a ready-to-go pack to get MAME going on your DDR cabinet.<br>you can download it [here](https://drive.google.com/file/d/1MeW7KpsYcS2fmws7ZQG0OomuIFVHAcid/view?usp=sharing), [here](https://mega.nz/file/ICVRFJwI#ksriX9qHzXEdDwwjsqYv84MN1V43CSedjK8lEosV_7Y), or [here](https://archive.org/download/ddr573-mame/ddr573-mame.zip). (12GB)<br><br>
 it includes:
   - a custom build of [bemani-mame](https://github.com/987123879113/mame/wiki).
   - pre-built NVRAM for (almost) every game, negating the need to install each game manually.
