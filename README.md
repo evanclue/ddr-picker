@@ -57,7 +57,7 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 - download the [modified micro theme zip](https://github.com/evanclue/ddr-picker/raw/main/micro.zip).
 - create a new directory in your pegasus folder just called `themes`, and extract the micro zip in there.
 - the full path for the micro theme should be `C:/pegasus/themes/micro/`.
-- download [settings.txt](https://github.com/evanclue/ddr-picker/raw/main/settings.txt). once you click the link, right click and do "save page as" to download it.
+- download [settings.txt](https://github.com/evanclue/ddr-picker/raw/main/settings.txt). once you click the link, right-click and do "save page as" to download it.
 - create a new folder called 'config' in the pegasus directory.
 - drop the settings.txt in there. full path should be `C:/pegasus/config/settings.txt`
 - if you open pegasus now, it should give you an error saying there are no games installed. so let's get some games!
