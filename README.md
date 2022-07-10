@@ -107,6 +107,8 @@ all you have to do is replace `ddrexproc` in the launcher script with the name o
 for instance, if you replaced it with `ddr2m`, it would launch Dance Dance Revolution 2ndMIX.
 feel free to repeat this for every game listed in the `sta` folder that you want to have in your pegasus setup.
 
+you can see what mame name corresponds with each DDR game [here](https://github.com/987123879113/mame/wiki/Dance-Dance-Revolution-%7C-Dancing-Stage).
+
 **pro tip:** if you want to have increased visual clarity when booting a game, you can create a shortcut of `kill_pegasus.bat`, `mame2lit.exe`, and `mame.exe`, edit the properties of each shortcut so that they start 'minimized', and then point the autohotkey launcher script to their respective .lnk shortcut files.<br>they will start minimized, and it looks really clean. i prefer it, but whether or not you choose to do it yourself is up to you.
 
 ---
@@ -134,7 +136,26 @@ feel free to repeat this for every game listed in the `sta` folder that you want
 
 - once you've gone through and made scripts for every game, added them to the corresponding metadata file, and tested each and every game to make sure they launch fine through pegasus, you can start setting up your controls in MAME.
 
+---
+
 #### setting up controls in MAME.
 
+- open a game using pegasus, or by running the shortcut manually.
+- press TAB. this will open a settings menu.
+- scroll to *Input (this machine)* and press enter.
+- systematically clear every control in the list by pressing delete, then the down arrow. delete, down, delete, down, delete, etc., until the list is entirely cleared.
+- Up, Down, Left, and Right corresponds to the dance pad.
+- Button 2 is the left selector button, and Button 3 is the right selector button.
+- Player Start is the start button.
+- apply these settings for both players.
+- press tab to close the MAME menu.
+- press esc. to gracefully exit mame to make sure your settings will be saved.
+- you will have to do this for each game individually, but you only have to do it once.
 
 ---
+
+it's all starting to look very promising. we have a frontend for DDR that looks great, all the games' controls are set up, the cab lights are working, and you can navigate the frontend using the cab buttons.
+
+now all we have to do is
+#### automate windows to run the frontend at startup.
+
