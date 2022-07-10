@@ -26,7 +26,7 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 
 ## installation:
 
-#### first thing you're gonna need to do is get your cab modded with an LCD.
+### first thing you're gonna need to do is get your cab modded with an LCD.
 - acquire a 30" 16:10 display, such as the Dell Ultrasharp U3014.
 - safely discharge and remove the original CRT, and store it in a safe place, or sell it to someone that will appreciate it more than you do.
 - [build a display mount out of wood so that the 16:10 display lines up perfectly with the original bezel.](https://user-images.githubusercontent.com/72628412/178120376-47b18732-93ec-43bb-a496-6dd16dea765b.jpg)
@@ -34,15 +34,15 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 
 ---
 
-#### next, we gotta get a PC in there.
+### next, we gotta get a PC in there.
 - get a PC. maybe you have an old rig gathering dust -- you can use that. MAME and simulators aren't very demanding, they'll likely run fine on whatever you already have.
 - if you removed the CRT from your DDR cab, you have a ton of room in the back of the monitor box to drop your PC into. that's where i have mine, and it fits very nicely in there.
 - create a lightweight Windows 10 install, such as [LTSC](https://docs.microsoft.com/en-us/windows/whats-new/ltsc/), on an SSD with reasonably high capacity. the latest LTSC 2021 is probably fine, but i used LTSC 2019 for no reason in particular.
 
 ---
 
-#### now, set up your cab stuff.
-- install your [LIT board](https://dinsfire.com/projects/lit-board/) to make your cab lights work, and your [J-PAC](https://www.ultimarc.com/control-interfaces/j-pac-en/j-pac-c-control-only-version/), so your control panel buttons will work.
+### now, set up your cab stuff.
+- install your [LIT board](https://dinsfire.com/projects/lit-board/) to make your cab lights work, and your [J-PAC](https://www.ultimarc.com/control-interfaces/j-pac-en/j-pac-c-control-only-version/) for your control panel. use [WinIPAC v2](http://ultimarc2.com/winipacv2.html) to remap your control panel buttons.
 - i have my control panel set up like this:
 ![cp-mapping](https://user-images.githubusercontent.com/72628412/178121065-bd7bb1a5-8258-42e7-bedc-ac0ffc1999cd.png)
 - i found that this was the best mapping for compatibility with games, and functionality within pegasus-fe's limitations.
@@ -50,7 +50,7 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 
 ---
 
-#### at this point, we can finally get started on setting up pegasus.
+### at this point, we can finally get started on setting up pegasus.
 - download the latest version of [pegasus-fe](https://pegasus-frontend.org/#downloads).
 - place pegasus-fe.exe somewhere like `C:/pegasus/pegasus-fe`. don't run it yet.
 - create a blank text document titled `portable.txt` and place it in your `C:/pegasus/pegasus-fe` directory next to pegasus-fe.exe
@@ -64,7 +64,7 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 
 ---
 
-#### now, we can set up MAME for DDR.
+### now, we can set up MAME for DDR.
 i've assembled a ready-to-go pack to get MAME going on your DDR cabinet.<br>you can download it [here](https://drive.google.com/file/d/1MeW7KpsYcS2fmws7ZQG0OomuIFVHAcid/view?usp=sharing), or [here](https://mega.nz/file/ICVRFJwI#ksriX9qHzXEdDwwjsqYv84MN1V43CSedjK8lEosV_7Y). (12GB)<br><br>
 it includes:
   - a custom build of [bemani-mame](https://github.com/987123879113/mame/wiki).
@@ -77,7 +77,7 @@ now that we have MAME, we can start writing scripts to get games to launch.
 
 ---
 
-#### writing scripts to get games to launch.
+### writing scripts to get games to launch.
 
 you can do this a few different ways. you can do it using a mame.exe shortcut, you can do it as a batch script -- but i've had trouble getting pegasus to open .lnk and .bat files sometimes, and i couldn't really figure out why.<br>my solution was to use autohotkey, compile my scripts as .exe, and have pegasus open the .exe file.
 
@@ -114,7 +114,7 @@ you can see what mame name corresponds with each DDR game [here](https://github.
 
 ---
 
-#### downloading assets for pegasus
+### downloading assets for pegasus
 - okay, so we have some game launchers written in autohotkey, and compiled to .exe.
 - now, we can download the logos for each game you want to have in your launcher.
 - you can download [individual logos](https://github.com/evanclue/ddr-picker/tree/main/assets), or you can just download [the whole pack](https://github.com/evanclue/ddr-picker/raw/main/assets.zip).
@@ -125,7 +125,7 @@ you can see what mame name corresponds with each DDR game [here](https://github.
 
 ---
 
-#### setting up the metadata files
+### setting up the metadata files
 - download this [ddr metadata template file](https://github.com/evanclue/ddr-picker/raw/main/scripts/ddr.metadata.pegasus.txt) by right-clicking and doing 'save page as', and place it in your `metafiles` folder, next to `assets`.
 - the full path should be `C:\pegasus\config\metafiles\ddr.metadata.pegasus.txt`
 - you should be able to boot up pegasus-fe finally, and scroll around! hooray! look how pretty it is!
@@ -139,7 +139,7 @@ you can see what mame name corresponds with each DDR game [here](https://github.
 
 ---
 
-#### setting up controls in MAME.
+### setting up controls in MAME.
 
 - open a game using pegasus, or by running the shortcut manually.
 - press TAB. this will open a settings menu.
@@ -183,14 +183,14 @@ and, of course, we want pegasus to start as soon as possible, so here it is.
 
 ---
 
-#### adding a reset button.
+### adding a reset button.
 
 after opening a game, the only way for us to close the game and get back to the menu is to do it ourselves, or reboot.<br>
 that sucks. let's make a reset button!
 
 the way i made this happen is with a combination of hardware and software tweaks.<br>
 i added a [physical reset button to my cab's coindoor](https://user-images.githubusercontent.com/72628412/178127104-343ae045-aaf1-47c7-aba1-c28c2190d382.jpg), as demonstrated in the video at the top of this readme.<br>
-i wired the button up to the coin signal wires, which a J-PAC is able to bind to a keyboard key.<br>
+i wired the button up to the coin signal wires, which a J-PAC is able to bind to a keyboard key using WinIPAC v2.<br>
 so, i assigned the coin assembly to output the F12 key. which means i essentially have a physical F12 key on my coindoor now.<br>
 using an extremely simple autohotkey + batch solution, we can make this act as a "reset" button that closes whatever game is open, and returns to pegasus.<br>
 
@@ -205,3 +205,9 @@ so now, all we have to do is make the reset button script start at boot.
 - compile reset-button.ahk into an .exe using the right-click menu.
 - open pegasus-startup.ahk with a text editor, and add `run reset-button.exe` to it.
 - save the document, and re-compile pegasus-startup.ahk into an .exe.
+
+---
+
+### you did it! hooray!
+now you have a ddr-picker setup for your cab! this took me literally all day to write, and i hope i didn't miss anything.
+if you need any further help, feel free to reach out to me on [discord](https://discord.gg.clue).
