@@ -156,11 +156,9 @@ you can see what mame name corresponds with each DDR game [here](https://github.
 
 it's all starting to look very promising. we have a frontend for DDR that looks great, all the games' controls are set up, the cab lights are working, and you can navigate the frontend using the cab buttons.
 
-now all we have to do is
-#### automate windows to run the frontend at startup.
+now all we have to do is **automate windows to run the frontend at startup.**
 
-i've tried all sorts of methods of booting a program on startup, and they are all way, way too slow.
-putting a shortcut in the "startup" folder, adding a value to the "run" command in registry...<br>
-i even tried doing it in [windows task scheduler](https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page), which was hell. and, annoyingly, it was equally as slow as the other methods.
+i've tried all sorts of methods of booting a program on startup, and they are all way, way too slow. 30-60 seconds after reaching the desktop is unacceptably slow.
+putting a shortcut in the "startup" folder, adding a value to the "run" command in registry... i even tried doing it in [windows task scheduler](https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page), which was hell. and, annoyingly, it was equally as slow as the other methods.
 
 the most fastest and most effective method, albeit a bit aggressive, is to replace the fucking windows shell with our own script.
