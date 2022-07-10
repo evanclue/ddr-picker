@@ -46,6 +46,7 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 - i have my control panel set up like this:
 ![cp-mapping](https://user-images.githubusercontent.com/72628412/178121065-bd7bb1a5-8258-42e7-bedc-ac0ffc1999cd.png)
 - i found that this was the best mapping for compatibility with games, and functionality within pegasus-fe's limitations.
+- download [custom resolution utility](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU) and add 2133x1600@60Hz as a custom resolution. save, and reboot. set the custom resolution. hooray, high-res 4:3!
 
 ---
 
@@ -161,4 +162,30 @@ now all we have to do is **automate windows to run the frontend at startup.**
 i've tried all sorts of methods of booting a program on startup, and they are all way, way too slow. 30-60 seconds after reaching the desktop is unacceptably slow.
 putting a shortcut in the "startup" folder, adding a value to the "run" command in registry... i even tried doing it in [windows task scheduler](https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page), which was hell. and, annoyingly, it was equally as slow as the other methods.
 
-the most fastest and most effective method, albeit a bit aggressive, is to replace the fucking windows shell with our own script.
+the fastest and most effective method, albeit a bit aggressive, is to replace the windows shell with our own script.<br>
+this means that windows never initializes background services, which means you get more processing power for your games, and no annoying shit like windows defender. it also never initializes explorer.exe, which means no desktop icons, start menu, etc.<br>
+perfect for a "kiosk" setup like this!<br>
+
+- download [QRes.exe](https://github.com/evanclue/ddr-picker/raw/main/scripts/QRes.exe) and [pegasus-startup.ahk](https://github.com/evanclue/ddr-picker/raw/main/scripts/pegasus-startup.ahk), and place them in your `C:\pegasus` directory.
+
+let's take a look at what this script actually does.<br>
+`run QRes.exe /x:2133 /y:1600 /R:60`<br>
+this will reset the monitor's resolution to 2133x1600, at 60Hz. if your monitor's resolution got out of wack from a game messing it up or something, this will make sure it always boots into the resolution we want, right from startup.<br>
+`run pegasus-fe.exe`<br>
+and, of course, we want pegasus to start as soon as possible, so here it is.
+
+- compile the .ahk script to .exe.
+- open regedit, and navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon`. don't drop down the winlogon folder, just click on it.
+- you should now be able to see *Shell* on the right side. double-click on it, and replace it with `C:\pegasus\pegasus-startup.exe`
+- this will run our startup script immediately on boot, while disabling explorer, and other things we don't need.
+- reboot.
+- while in this "dedicated" pegasus mode, you can do ctrl+shift+esc to open task manager. do file>run, and you can open explorer.exe to do whatever file management tweaks you need to do. you can open regedit as well using the run prompt to revert the shell back to `explorer.exe` if you need to.
+
+---
+
+#### adding a reset button.
+
+after opening a game, the only way for us to close the game and get back to the menu is to manually shut it down, and manually open pegasus.<br>
+that sucks. let's make a reset button!
+
+- the way i made this happen is with a combination of
