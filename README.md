@@ -48,6 +48,9 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 - i found that this was the best mapping for compatibility with games, and functionality within pegasus-fe's limitations.
 - download [custom resolution utility](https://www.monitortests.com/forum/Thread-Custom-Resolution-Utility-CRU) and add 2133x1600@60Hz as a custom resolution. save, and reboot. set the custom resolution. hooray, high-res 4:3!
 
+- but what about the pads?
+- ah, right, the dance stages. you can probably use a pair of [STAC boards](https://icedragon.io/stac/) to adapt the original dance stages to PC, but i don't know how to do that, because i don't own original DDR stages. my DDR cab uses [StepManiaX stages](https://shop.steprevolution.com/products/stepmaniax-stage-5th-generation).
+
 ---
 
 ### at this point, we can finally get started on setting up pegasus.
