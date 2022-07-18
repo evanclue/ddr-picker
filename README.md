@@ -15,7 +15,7 @@ i'm a [graphic designer](https://clue.graphics), and not a coder -- so ddr-picke
 ## features:
 
 - custom version of [bemani-mame](https://github.com/987123879113/mame/wiki) that instantly loads KS573 mixes at the title screen, with event mode enabled in every mix that supports it
-- every game supports the original cab lighting, using a [LIT board](https://dinsfire.com/projects/lit-board/).
+- every game supports the original cab lighting (bass neons, marquee header spotlights), using a [LIT board](https://dinsfire.com/projects/lit-board/).
 - hand-made graphics for every single DDR logo, including many custom square logos that fit better in each "tile"
 - custom pegasus theme based on [pegasus-grid-micro](https://github.com/mmatyas/pegasus-theme-grid-micro), optimized for a high-resolution 4:3 display
 - reset button to return to the menu after opening a game
