@@ -111,6 +111,8 @@ all you have to do is replace `ddrexproc` in the launcher script with the name o
 for instance, if you replaced it with `ddr2m`, it would launch Dance Dance Revolution 2ndMIX.<br>
 feel free to repeat this for every game listed in the `sta` folder that you want to have in your pegasus setup.
 
+i have uploaded a [whole bunch of example mame launcher scripts](https://github.com/evanclue/ddr-picker/tree/main/scripts/ahk-launcher-scripts). feel free to download and use them however you like!
+
 you can see what mame name corresponds with each DDR game [here](https://github.com/987123879113/mame/wiki/Dance-Dance-Revolution-%7C-Dancing-Stage).
 
 **pro tip:** if you want to have increased visual clarity when booting a game, you can create a shortcut of `kill_pegasus.bat`, `mame2lit.exe`, and `mame.exe`, edit the properties of each shortcut so that they start 'minimized', and then point the autohotkey launcher script to their respective .lnk shortcut files.<br>they will start minimized, and it looks really clean. i prefer it, but whether or not you choose to do it yourself is up to you.
