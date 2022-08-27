@@ -222,7 +222,7 @@ You can see all of my files that I figured could be relevant in the `scripts\dta
 
 ---
 
-### automating the transition between kiosk mode and admin mode quickly.
+#### automating the transition between kiosk mode and admin mode quickly.
 
 I wanted to get fancy and make transitioning from 'kiosk' mode to 'admin mode' smooth and simple with a new set of extra scripts since I found making meaningful changes to files annoying in the limited 'kiosk' mode. If you're interested, checkout the following files in this repo:
 
@@ -242,7 +242,7 @@ These files effectively automate the portion above for replacing `explorer.exe` 
 
 ---
 
-### managing volume while in kiosk mode.
+#### managing volume while in kiosk mode.
 
 I realized quickly that running Windows without `explorer.exe` running has a bunch of second order consequences. One of the consequences was that the audio on-screen display (OSD) didn't work without Explorer running - I was only able to adjust volume by using the volume knob within the cab. To deal with this, I researched and found out about [this solution](https://www.reddit.com/r/gpdwin/comments/aroc9v/fix_using_volume_keys_with_a_custom_shell_not_gpd/) which totally worked - all you need to do is follow the instructions in that page, [install the app](https://github.com/sirWest/AudioSwitch/releases) and get it to start with your startup .AHK by adding a new .bat file:
 
@@ -252,7 +252,7 @@ When you do this, the startup script goes and launches the .exe for Audio Contro
 
 ---
 
-### screenshots to your phone.
+#### send screenshots to your phone.
 
 This one is more for a private setup and less applicable for a shared cabinet.
 When I get good scores, I want to share pics of those scores with my friends. So I'd whip out my phone to take the pics... and more often than not would get distracted, opening other apps and checking notifications - that's no good if I'm trying to get a real workout in. So, I needed to figure out a way to take pics of great scores without needing to use my phone to do it. Hence, my solution below:
