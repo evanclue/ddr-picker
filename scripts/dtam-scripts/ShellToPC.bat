@@ -1,1 +1,1 @@
-reg import C:\pegasus\scripts\ShellToPC.reg
+reg import C:\pegasus\scripts\dtam-scripts\ShellToPC.reg

@@ -215,6 +215,69 @@ so now, all we have to do is make the reset button script start at boot.
 
 ---
 
+### additional modifications and contributions.
+
+Hey all, [Dean](https://github.com/dtammam) here - I absolutely loved this project, implemented it on my cab and could not get over how cool it was. I also found that I had additional ideas to make it even better, connected with Clue and submitted some of these as contributions. 
+You can see all of my files that I figured could be relevant in the `scripts\dtam-scripts` directory, and I'll explain the general ideas below.
+
+---
+
+#### automating the transition between kiosk mode and admin mode quickly.
+
+I wanted to get fancy and make transitioning from 'kiosk' mode to 'admin mode' smooth and simple with a new set of extra scripts since I found making meaningful changes to files annoying in the limited 'kiosk' mode. If you're interested, checkout the following files in this repo:
+
+- F1ToKioskModeAndReboot.ahk
+- F2ToAdminModeAndReboot.ahk
+- ShellToGame.bat
+- ShellToPC.bat
+- ShellToGame.reg
+- ShellToPC.reg
+- reboot.ps1
+
+These files effectively automate the portion above for replacing `explorer.exe` with `C:\pegasus\pegasus-startup.exe` and vice versa in `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon` by setting the appropriate key and rebooting the computer with a mapped button via .AHK script (F1 and F2 in this example, but easily modifiable):
+
+- F1ToKioskModeAndReboot.ahk and F2ToAdminModeAndReboot.ahk each run ShellToGame.bat & reboot.ps1 or ShellToPC.bat & reboot.ps1 respectively.
+- ShellToGame.bat opens ShellToGame.reg and imports it into the registry, while ShellToPC.bat opens ShellToPC.reg and imports it into the registry.
+- reboot.ps1 kicks off an immediate computer reboot and starts it up in the correct 'mode', now that the key is set to what we want.
+
+---
+
+#### managing volume while in kiosk mode.
+
+I realized quickly that running Windows without `explorer.exe` running has a bunch of second order consequences. One of the consequences was that the audio on-screen display (OSD) didn't work without Explorer running - I was only able to adjust volume by using the volume knob within the cab. To deal with this, I researched and found out about [this solution](https://www.reddit.com/r/gpdwin/comments/aroc9v/fix_using_volume_keys_with_a_custom_shell_not_gpd/) which totally worked - all you need to do is follow the instructions in that page, [install the app](https://github.com/sirWest/AudioSwitch/releases) and get it to start with your startup .AHK by adding a new .bat file:
+
+- backendcontrols.bat
+
+When you do this, the startup script goes and launches the .exe for Audio Controls in the background and restores functionality (putting it in a startup folder doesn't work, because, well - `explorer.exe` isn't running) and lets you use your beloved media control keys to change the volume :)
+
+---
+
+#### send screenshots to your phone.
+
+This one is more for a private setup and less applicable for a shared cabinet.
+When I get good scores, I want to share pics of those scores with my friends. So I'd whip out my phone to take the pics... and more often than not would get distracted, opening other apps and checking notifications - that's no good if I'm trying to get a real workout in. So, I needed to figure out a way to take pics of great scores without needing to use my phone to do it. Hence, my solution below:
+
+- Pick your cloud photo service of choice (iCloud, Google Photos, Dropbox, etc.)
+- Install it on your cabinet, log it in and set it to auto start
+- Pick a button that will be used to initiate a screenshot and then save the photo into the relevant folder in your cloud app
+
+I use iCloud, and will use it for this explanation. You'll need a few files:
+
+- ScreenshotTake.ps1
+- PlusToCopyScreen.ahk
+- SlashToCopyScreen.ahk
+- backendcontrols.bat
+
+It's actually pretty much ready to use. All you need to do is figure out which button you want and which folder your photos need to land into to get automatically uploaded to the cloud provider of your choice, and update `Line 47` of ScreenshotTake.ps1 to make the correct directory precede the file in the variable. ScreenshotTake.ps1 is a cool script that basically takes a .jpg image of your screen using .NET and saves it in the location of your choice. My setup saves it here, but will need to be updated depending on where your `Upload` directory is:
+
+  `$File = "C:\Users\me\Pictures\Uploads\$($FileName).jpg"`
+
+Once done... compile the button specific .ahk files and reference them in your `pegasus-startup.ahk` (feel free to reference my `startall.ahk` for an example), update your `backendcontrols.bat` to include any relevant .exe's for the cloud provider (again, putting it in a startup folder doesn't work, because `explorer.exe` isn't running), compile your .ahk's into .exe's and you should be all set!
+
+Passing it back to Clue to wrap.
+
+---
+
 ### you did it! hooray!
 now you have a ddr-picker setup for your cab! this took me literally all day to write, and i hope i didn't miss anything.
 if you need any further help, feel free to reach out to me on [discord](https://discord.gg/clue).
