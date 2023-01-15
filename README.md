@@ -4,7 +4,7 @@ ddr-picker is a [pegasus-fe](https://pegasus-frontend.org/)-based game frontend 
 https://user-images.githubusercontent.com/72628412/178119730-f949970a-1269-4377-9f61-493f88cf89aa.mp4
 
 if you are looking for a plug-and-play solution, look elsewhere. this will require a lot of manual reworking for your exact system.<br>
-this will NOT WORK on an original CRT without heavy reworking of all the graphics, and scripts.
+~~this will NOT WORK on an original CRT without heavy reworking of all the graphics, and scripts.~~ i have had reports from multiple people saying that it will work fine on a CRT!
 
 ddr-picker was specifically optimized for the niche of DDR cabinets that feature a Windows 10 PC plugged into a Dell Ultrasharp U3014 LCD running in 2133 x 1600 resolution (4:3, maxing out the vertical resolution of the monitor) underneath the original display bezel.<br>
 the DDR cabinet's control panel is handled using a [J-PAC](https://www.ultimarc.com/control-interfaces/j-pac-en/j-pac-c-control-only-version/), which makes the buttons on the cab function like a keyboard. the lighting is handled using a [LIT board](https://dinsfire.com/projects/lit-board/).
